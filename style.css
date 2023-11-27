@@ -1,0 +1,248 @@
+:root {
+/* ## Colors */
+
+/* ### Primary */
+
+--Tomato: hsl(4, 100%, 67%);
+--tomato-2: hsl(17, 90%, 64%);
+
+/* ### Neutral */
+
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+/* font family */
+--Roboto: 'Roboto', sans-serif;
+}
+
+/* Kevin Powell Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*End of Reset*/
+
+/* General Styling */
+
+dialog {
+    position: static;
+    border: none;
+    font-size: 1rem;
+}
+
+.sign-up {
+    display: none;
+    flex-direction: column;
+    width: 100vw; 
+}
+
+@media (min-width: 48.0625em) {
+    body {
+        background-color: var(--Dark-Slate-Grey);
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-up {
+        border-radius: 10px;
+        flex-direction: row-reverse;
+        max-width: 770px;
+        padding: 1rem;
+        padding-left: 0;
+        align-items: center;
+        & .container-1 {
+            padding: 2.5rem;
+        }
+    }
+}
+
+.container-1 {
+    padding: 1.25rem;
+}
+
+h1 {
+    line-height: 1.2;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+/* photos */
+picture {
+
+    & img {
+        width: 100%;
+    }
+}
+/* list */
+ul {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+    & li {
+        list-style: none;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+/* form */
+form {
+    & div {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        justify-content: space-between;
+    }
+    & #error-message {
+        visibility: hidden;
+        color: var(--Tomato);
+    }
+    & input {
+        border: 1px solid var(--Grey);
+        padding: 1rem;
+        margin-bottom: 1.4rem;
+    }
+    & input::placeholder {
+        opacity: 0.5;
+    }
+}
+input, button {
+    border-radius: 10px;
+}
+button {
+    cursor: pointer;
+    padding: 1em;
+    color: var(--White);
+    font-weight: 700;
+    border: none;
+    transition: 0.3s;
+}
+button:hover {
+    background: linear-gradient(137deg, var(--Tomato), var(--tomato-2));
+}
+.success-message {
+    height: 100vh;
+    justify-content: space-between;
+    padding: 2rem 1.25rem;
+    & div {
+        margin-top: 4rem;
+    }
+    & img {
+        width: 5rem;
+        margin-bottom: 2rem;
+    }
+    & span {
+      font-weight: 700;
+    }
+}
+
+@media (min-width: 48.0625em) {
+    .success-message {
+        border-radius: 10px;
+        max-height: 25rem;
+        max-width: 25rem;
+        padding: 3rem;
+        & div {
+            margin: 0;
+        }
+        & img {
+            width: 3rem;
+            margin: 0;
+            margin-bottom: 1em;
+        }
+        & h1 {
+            font-size: 2.5rem;
+        }
+        & p {
+            font-size: 0.75rem;
+        }
+        & span {
+          font-weight: 700;
+        }
+        & button {
+            padding: 0.75em;
+            font-size: 0.75rem;
+        }
+    }
+}
+/* Utility Classes */
+
+.bg-dark-slate-grey {
+    background-color: var(--Dark-Slate-Grey);
+}
+
+.fc-dark-slate-grey {
+    color: var(--Dark-Slate-Grey);
+}
+
+.roboto {
+    font-family: var(--Roboto);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}

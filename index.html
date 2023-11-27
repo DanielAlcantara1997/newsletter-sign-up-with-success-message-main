@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- fonts -->
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+<link rel="stylesheet" href="./style.css">
+<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+
+</head>
+<body class="roboto flex">
+  <dialog class="sign-up | flex">
+
+    <picture> 
+      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 48.0625em)">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="mobile">
+    </picture>
+  <!-- Sign-up form start -->
+    <div class="container-1 | flex flex-column fc-dark-slate-grey">
+
+      <h1>Stay updated!</h1>
+
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul>
+        <li class="flex"><img src="./assets/images/icon-list.svg" alt="icon list">Product discovery and building what matters</li>
+        <li class="flex"><img src="./assets/images/icon-list.svg" alt="icon list">Measuring to ensure updates are a success</li>
+        <li class="flex"><img src="./assets/images/icon-list.svg" alt="icon list">And much more!</li>
+      </ul>
+
+      <form class="flex flex-column" action="">
+        <div class="flex">
+          <label for="email">Email address</label>
+          <p id="error-message">Valid email required</p>
+        </div>
+
+        <input type="text" id="email" name="email" placeholder="email@company.com">
+        
+        <button class="bg-dark-slate-grey" type="submit">Subscribe to monthly newsletter</button>
+      
+      </form>
+    </div>
+    <!-- Sign-up form end -->
+  </dialog>
+
+  <!-- Success message start -->
+  <dialog class="success-message | fc-dark-slate-grey" close>
+  <div>
+  <img src="./assets/images/icon-success.svg" alt="check icon">
+  <h1>Thanks for subscribing!</h1>
+
+  <p>A confirmation email has been sent to <span>ash@loremcompany.com.</span> 
+  Please open it and click the button inside to confirm your subscription.</p>
+ </div>
+
+  <button id="success-btn" class="bg-dark-slate-grey">Dismiss message</button>
+  </dialog>
+  <!-- Success message end -->
+
+  <script src="./main.js" charset="UTF-8"></script>
+</body>
+</html>
